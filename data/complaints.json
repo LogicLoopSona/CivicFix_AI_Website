@@ -1,0 +1,24 @@
+[
+  {
+    "id": "CFAI-34FD5DB",
+    "name": "sONA GUPTA",
+    "contact": "9997632940",
+    "description": "DANGEROUS TWO VEHICLE",
+    "location": "TRILOK APARTMENT",
+    "latitude": "27.148815",
+    "longitude": "78.048743",
+    "photo": "2f9986d271b5410dbe1d63bedb3923fc.png",
+    "category": "Other Civic Issue",
+    "department": "Municipal Helpdesk",
+    "severity": "Critical",
+    "priority": 90,
+    "duplicate_of": "",
+    "status": "AI Verified",
+    "created_at": "2026-11-11 22:40",
+    "resolution_photo": "",
+    "updates": [
+      "Complaint received",
+      "Demo AI screening completed"
+    ]
+  }
+]

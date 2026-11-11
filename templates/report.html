@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block title %}Report an Issue | CivicFix AI{% endblock %}
+{% block content %}<section class="page-wrap"><div class="container"><div class="page-head form-card"><span class="eyebrow">Citizen portal</span><h1 class="page-title">Report a civic issue</h1><p>Share clear details so the concerned team can understand and act on the issue.</p></div>
+<div class="card form-card"><form method="post" enctype="multipart/form-data">
+<div class="form-grid">
+  <div class="field"><label for="name">Your name *</label><input id="name" name="name" required placeholder="Enter your name"></div>
+  <div class="field"><label for="contact">Contact (optional)</label><input id="contact" name="contact" placeholder="Phone or email"></div>
+  <div class="field full"><label for="description">Issue description *</label><textarea id="description" name="description" required placeholder="Example: A large pothole near the school gate is dangerous for two-wheelers."></textarea><div class="hint">Mention the issue and any safety risk. This helps the demo screening suggest severity.</div></div>
+  <div class="field full"><label for="location">Issue location / landmark *</label><input id="location" name="location" id="location" required placeholder="Street, area, landmark, city"></div>
+  <input type="hidden" name="latitude" id="latitude"><input type="hidden" name="longitude" id="longitude">
+  <div class="field full"><button type="button" class="btn secondary" id="gpsButton" onclick="useMyLocation()">◎ Use my location</button><div class="hint">GPS permission is optional. Works on localhost or HTTPS.</div></div>
+  <div class="field full"><label for="photo">Upload issue photo (JPG, PNG or WEBP)</label><input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.webp,image/*"><div class="hint" id="fileName">No file selected · Maximum 8 MB</div></div>
+</div>
+<button class="btn" type="submit">Submit Complaint →</button>
+</form></div></div></section>{% endblock %}

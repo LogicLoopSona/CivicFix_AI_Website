@@ -1,0 +1,32 @@
+{% extends "base.html" %}{% block title %}CivicFix AI | Intelligent Civic Issue Resolution{% endblock %}
+{% block content %}
+<section class="hero"><div class="container hero-grid">
+  <div><span class="eyebrow">✦ AI + Computer Vision + Geolocation</span>
+    <h1>Make your city<br><span>better, together.</span></h1>
+    <p>Report potholes, overflowing garbage, broken streetlights and water leaks. CivicFix AI helps organize civic issues so the right teams can act faster.</p>
+    <div class="hero-actions"><a class="btn" href="{{ url_for('report') }}">＋ Report an Issue</a><a class="btn secondary" href="{{ url_for('track') }}">Track a Complaint</a></div>
+    <p class="hint">A transparent civic reporting demo for citizens and municipal teams.</p>
+  </div>
+  <div class="hero-visual"><div class="visual-top"><strong>City issue monitor</strong><span class="pill Medium">Live demo</span></div>
+    <div class="visual-map"><div class="road"></div><span class="pin one">● Road damage</span><span class="pin two">● Waste issue</span></div>
+    <div class="issue-mini"><span><i class="dot"></i>Road damage reported</span><strong>High</strong></div>
+    <div class="issue-mini"><span><i class="dot" style="background:#0f9f8f"></i>Garbage overflow</span><strong>Medium</strong></div>
+  </div>
+</div></section>
+<div class="container"><div class="stats">
+  <div class="stat-card"><small>Total Issues</small><strong>{{ stats.total }}</strong></div>
+  <div class="stat-card"><small>Pending</small><strong>{{ stats.pending }}</strong></div>
+  <div class="stat-card"><small>In Progress</small><strong>{{ stats.progress }}</strong></div>
+  <div class="stat-card"><small>Resolved</small><strong>{{ stats.resolved }}</strong></div>
+</div></div>
+<section class="section"><div class="container"><div class="section-head"><span class="eyebrow">How it works</span><h2>From report to resolution</h2><p>A simple workflow that connects citizen reports with authority action.</p></div>
+<div class="features">
+  <div class="card feature"><div class="feature-icon">📷</div><h3>1. Report with evidence</h3><p>Upload an issue photo, describe the problem and share the location.</p></div>
+  <div class="card feature"><div class="feature-icon">🧠</div><h3>2. AI-assisted screening</h3><p>Demo classification suggests an issue type, department and severity.</p></div>
+  <div class="card feature"><div class="feature-icon">⚡</div><h3>3. Smart prioritization</h3><p>Priority score helps highlight urgent public-impact issues.</p></div>
+  <div class="card feature"><div class="feature-icon">🏢</div><h3>4. Department routing</h3><p>Send each complaint to a suggested responsible department.</p></div>
+  <div class="card feature"><div class="feature-icon">🗺️</div><h3>5. Track progress</h3><p>Citizens can follow the complaint lifecycle with a unique ID.</p></div>
+  <div class="card feature"><div class="feature-icon">✅</div><h3>6. Verify resolution</h3><p>Authorities can upload after-repair evidence and close the issue.</p></div>
+</div></div></section>
+<section class="section" style="padding-top:0"><div class="container"><div class="cta"><div><h2 style="font:800 26px Manrope;margin:0">See an issue? Help fix it.</h2><p>Your report can help make public spaces safer.</p></div><a class="btn" href="{{ url_for('report') }}">Start a Report →</a></div></div></section>
+{% endblock %}
